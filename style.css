@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+   
+}
+@import url('https://fonts.googleapis.com/css2?family=Akt:wght@100..900&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+html , body{
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #FBF9F9;
+}
+
+
+header nav{
+    
+    height: 75px;
+    /* width: 100%; */
+    background-color: #FBF9F9;
+    display: flex;
+    padding-right: 100px;
+    padding-left: 100px;
+    justify-content: space-around;
+    align-items: center;
+    /* padding-left: 150px;
+    padding-right: 150px; */
+    overflow: hidden;
+    /* position: fixed; */
+    /* z-index: 1000; */
+
+}
+
+.left-btn{
+    line-height:52px;
+    letter-spacing: -0.05em;
+    /* font-size: 15px; */
+    font-size: 17px;
+    font-weight: 500;
+    /* --tw-text-opacity: 1; */
+    font-family: "Playfair Display";
+}
+
+
+.middle-btn{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+     /* gap: 15px; */
+    /* min-width: 100px; */
+    width: 300px;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+        gap: 2.5rem;
+
+    
+}
+
+#shopy{
+    
+
+
+            background: transparent;
+    border: none;
+    position: relative;
+ /* text-transform: uppercase; */
+ font-weight: bold;
+    cursor: pointer;
+}
+#shopy::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background: #000;
+}
+
+.middle-btn button{
+    height: 30px;
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 14px;
+    background: transparent;
+
+}
+
+.end-btn{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.end-btn button i{
+    height: 50px;
+    width: 25px;
+font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.end-btn button{
+        border: none;
+    background: transparent;
+}
+
+#sign-up{
+    height: 40px;
+    width: 10vw;
+    background-color: black;
+    color: white;
+    
+}
+
+
+
+.main-dis{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    
+}
+
+.display-text-watch{
+    margin: 5px;
+    height: 90vh;
+    min-width: 400px;
+    background-color: #F3F1F1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.display-idea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.text-area{
+    height: 500px;
+    width: 50%;
+    /* background-color: pink; */
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    
+}
+
+.text-top{
+    height: 40%;
+    width: 30%;
+    padding: 5px ;
+
+
+}
+.text-top h1{
+    font-size: 65px;
+}
+
+.text-middle{
+    height: 25%;
+    width: 60%;
+    font-size: 1rem;
+    /* background-color: #fff; */
+    /* margin-bottom: 20px; */
+}
+
+.text-end{
+    height: 35%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    gap: 40px;
+}
+
+.price h1{
+    font-size: 45px;
+}
+
+
+#btn-attend-1{
+    height: 40px;
+    width: 225px;
+    background-color: black;
+    font-family: "Manrope"; 
+    color: white;
+    
+    font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+}
+
+#btn-attend-2{
+    height: 40px;
+    width: 150px;
+    margin-left: 10px;
+    border: 1px solid black;
+    color: black;
+    font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+    background-color: transparent;
+}
+
+
+
+.watch-img{
+    display: flex;
+    /* background-color: pink; */
+    height: 500px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch-img img{
+    height: 420px;
+    width: 420px;
+}
+
+.watch-img button{
+height: 40px;
+    width: 40px;
+    font-size: 15px;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.box1{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}
+
+
+
+.scroll-section {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    padding-left: 10%;
+    overflow: hidden;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#scroll-text {
+    /* margin-bottom: 200px; */
+    /* margin-top: 100px; */
+    font-size: 6rem;
+    font-weight: 800;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    transform: translateX(-150%); /* Pehle screen se bahar rahega */
+    opacity: 0;
+}
+
+
+
+.seasonal-list-main{
+    height: 85vh;
+    /* background-color: rgb(255, 0, 0); */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.seasonal-list-A{
+    margin-top: 10px;
+    height: 120px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.seasonal-text h1{
+    font-size: 45px;
+}
+
+.seasonal-text h4{
+    font-size: 16px;
+    color: rgb(118, 91, 23);
+}
+
+
+.seasonal-list-A .all-collection{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    position: relative;
+ /* text-transform: uppercase; */
+ font-weight: bold;
+    cursor: pointer;
+    
+
+}
+
+.seasonal-list-A .all-collection button{
+    height: 50px;
+    width: 100px;
+    border: none;
+    background: transparent;
+    
+}
+
+.all-collection::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+.seasonal-cards{
+    height: 70vh;
+    /* background-color: yellow; */
+}
