@@ -16,7 +16,7 @@ html , body{
 header nav{
     
     height: 75px;
-    /* width: 100%; */
+    width: 100%;
     background-color: #FBF9F9;
     display: flex;
     padding-right: 100px;
@@ -26,7 +26,7 @@ header nav{
     /* padding-left: 150px;
     padding-right: 150px; */
     overflow: hidden;
-    /* position: fixed; */
+    /* position: sticky; */
     /* z-index: 1000; */
 
 }
@@ -390,3 +390,69 @@ height: 40px;
     padding-right: 20px;
     color: black;
 }
+
+
+.seasonal-list-viewmore{
+    height: 10vh;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.seasonal-list-viewmore h4{
+    color: #1B1C1C;
+}
+
+.seasonal-list-viewmore i{
+    font-size: 40px;
+}
+
+.seasonal-list-viewmore i:hover{
+    font-size: 50px;
+}
+.seasonal-list-viewmore:hover{
+  color: rebeccapurple;
+  
+}
+
+.edition-bar-main{
+    height: 90vh;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+
+.img-side-A{
+   
+    height: 650px;
+    /* display: flex;
+    align-items: center;
+    justify-content: cen; */
+    width: 550px;
+    border: 20px solid #0C0906;
+    color: white;
+    overflow: hidden;
+}
+
+
+
+.img-side-A img{
+   height: 400px;
+ 
+}
+
+
+
+.text-side-B{
+    height: 550px;
+    width: 550px;
+    border: 20px solid #0C0906;
+    color: white;
+}
+
