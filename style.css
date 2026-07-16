@@ -14,10 +14,20 @@ html , body{
 
 
 header nav{
+    /* 1. Transparent white background (rgba use karenge takay opacity control ho sake) */
+    background-color: rgba(251, 249, 249, 0.75); 
+    
+    /* 2. Backdrop filter jo peeche wale content ko blur karega */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari browser support ke liye */
+    
+    /* 3. Ek halka sa bottom border (optional, glass look ko mazeed behtar banata hai) */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     
     height: 75px;
     width: 100%;
-    background-color: #FBF9F9;
+    /* background-color: #FBF9F9; */
+    /* background-color: transparent; */
     display: flex;
     padding-right: 100px;
     padding-left: 100px;
@@ -26,8 +36,8 @@ header nav{
     /* padding-left: 150px;
     padding-right: 150px; */
     overflow: hidden;
-    /* position: sticky; */
-    /* z-index: 1000; */
+    position: fixed;
+    z-index: 1000;
 
 }
 
@@ -133,6 +143,7 @@ font-size: 20px;
 }
 
 .display-text-watch{
+    
     margin: 5px;
     height: 90vh;
     min-width: 400px;
@@ -163,7 +174,7 @@ font-size: 20px;
 .text-top{
     height: 40%;
     width: 30%;
-    padding: 5px ;
+    padding: 5px;
 
 
 }
@@ -171,10 +182,17 @@ font-size: 20px;
     font-size: 65px;
 }
 
+.text-top h5{
+     font-family: "Manrope";
+     color: #7A5743;
+}
+
 .text-middle{
     height: 25%;
     width: 60%;
     font-size: 1rem;
+     font-family: "Manrope";
+     font-weight: 50;
     /* background-color: #fff; */
     /* margin-bottom: 20px; */
 }
@@ -186,31 +204,41 @@ font-size: 20px;
     flex-direction: column;
     padding: 20px 0px;
     gap: 40px;
+    font-family: "Playfair Display";
 }
 
+.text-end h4{
+    font-family: "Manrope";
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #BABABA;
+}
 .price h1{
     font-size: 45px;
 }
 
 
 #btn-attend-1{
+     
     height: 40px;
     width: 225px;
     background-color: black;
-    font-family: "Manrope"; 
+     
     color: white;
     
-    font-family: "Manrope", sans-serif;
+   font-family: "Manrope";
   font-optical-sizing: auto;
 }
 
 #btn-attend-2{
+     font-family: "Manrope";
+     
     height: 40px;
     width: 150px;
     margin-left: 10px;
     border: 1px solid black;
     color: black;
-    font-family: "Manrope", sans-serif;
+
   font-optical-sizing: auto;
     background-color: transparent;
 }
@@ -249,17 +277,18 @@ height: 40px;
 
 
 .scroll-section {
-    height: 20vh;
+    height: 22vh;
     display: flex;
     align-items: center;
     justify-content: flex-start; 
     padding-left: 10%;
     overflow: hidden;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    /* border-top: 0px solid #EAEAEA; */
+    border-bottom: 1px solid #EAEAEA;
 }
 
 #scroll-text {
+
     /* margin-bottom: 200px; */
     /* margin-top: 100px; */
     font-size: 6rem;
@@ -290,16 +319,24 @@ height: 40px;
 }
 
 .seasonal-text h1{
-    font-size: 45px;
+    font-size: 40px;
+     font-family: "Playfair Display";
+     font-weight: 100;
 }
 
 .seasonal-text h4{
-    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Manrope";
+    margin-bottom: 15px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    
     color: rgb(118, 91, 23);
 }
 
 
 .seasonal-list-A .all-collection{
+  
     display: flex;
     gap: 20px;
     font-size: 20px;
@@ -312,23 +349,42 @@ height: 40px;
 }
 
 .seasonal-list-A .all-collection button{
+      font-family: "Manrope";
+    text-transform: uppercase;
     height: 50px;
-    width: 100px;
+    font-size: 11px;
+    width: 140px;
     border: none;
     background: transparent;
+    letter-spacing: 1px;
     
 }
 
 .all-collection::after{
     content: "";
     position: absolute;
-    left: 50%;
+    left: 48%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 100%;
+    width: 95%;
+    height: 2px;
+    background: #C4C7C7;
+}
+
+
+#collection-one::after{
+    content: "";
+    position: absolute;
+    left: 12%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 22%;
     height: 2px;
     background: #000;
+    z-index: 100;
 }
+
+
 .seasonal-cards{
     height: 70vh;
     /* background-color: yellow; */
@@ -361,18 +417,27 @@ height: 40px;
 }
 
 .card-text-1{
+    
     /* height: 20%; */
-    width: 50%;
+    width: 60%;
     /* background: #000; */
     padding: 30px 10px;
 }
 
 .card-text-1 h4{
-    color: goldenrod;
+      font-family: "Manrope";
+    text-transform: uppercase;
+    color: #7A573A;
     margin-bottom: 4px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 .card-text-1 h3{
     color: black;
+      font-family: "Manrope";
+    text-transform: uppercase;
+    font-size: 16px;
     
 }
 
@@ -383,6 +448,9 @@ height: 40px;
 }
 
 .card-text-2{
+      font-family: "Playfair Display";
+    /* text-transform: uppercase; */
+font-size: 15px;
     width: 50%;
     display: flex;
     align-items: center;
@@ -393,6 +461,8 @@ height: 40px;
 
 
 .seasonal-list-viewmore{
+     font-family: "Manrope";
+    text-transform: uppercase;
     height: 10vh;
     /* background-color: black; */
     display: flex;
@@ -404,15 +474,14 @@ height: 40px;
 
 .seasonal-list-viewmore h4{
     color: #1B1C1C;
+    font-size: 12px;
 }
 
 .seasonal-list-viewmore i{
     font-size: 40px;
 }
 
-.seasonal-list-viewmore i:hover{
-    font-size: 50px;
-}
+
 .seasonal-list-viewmore:hover{
   color: rebeccapurple;
   
@@ -424,7 +493,7 @@ height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 10px;
 }
 
 
@@ -434,7 +503,7 @@ height: 40px;
     display: flex;
     align-items: center;
    justify-content: center;
-    width: 550px;
+    width: 600px;
     border: 20px solid #0C0906;
     color: white;
     overflow: hidden;
@@ -445,7 +514,13 @@ height: 40px;
 
 .img-side-A img{
    height: 550px;
-   
+   filter: saturate(0%);
+
+ 
+}
+
+.img-side-A img:hover{
+   filter: saturate(100%);
 
  
 }
@@ -455,7 +530,7 @@ height: 40px;
 .text-side-B{
     height: 550px;
     width: 550px;
-    border: 20px solid #0C0906;
+    /* border: 20px solid #0C0906; */
     color: white;
 }
 
@@ -466,11 +541,12 @@ height: 40px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    left: 350px;
+    left: 380px;
     height: 200px;
-    width: 160px;
+    width: 180px;
     color: #FFFFFF;
     background-color: #7A573A;
+    
 
 }
 
@@ -484,33 +560,156 @@ height: 40px;
     /* align-items: center; */
     justify-content: space-around;
     flex-direction: column;
+    
 }
 
 
 .text-side-B h3{
-    font-size: 18px;
+    font-size: 12px;
     margin: 10px 0px;
+    font-family: "Manrope";
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFD9B1;
+    font-weight: 600;
+    
 }
 
 
 .text-side-B h1{
      margin: 10px 0px;
+       font-family: "Playfair Display", serif;
+       font-style: italic;
+       font-size: 40px;
 }
 
 .text-side-B h4{
-    color: gray;
+    color: #B3B3B3;
+    line-height: 23px;
+    font-size: 15px;
+    font-family: "Manrope";
 }
 
 .text-side-B ul {
-    color: goldenrod;
+    color: #CCCCCC;
     margin-left: 10px;
+    line-height: 25px;
+    font-size: 13px;
+    text-transform: uppercase;
+      font-family: "Manrope";
+      font-weight: 600;
+
+}
+
+.text-side-B ul li::marker{
+    color: #7A573A;
+    font-size: 10px;
 }
 
 
 .text-side-B button{
     height: 50px;
-    width: 200px;
+    width: 230px;
     color: #000;
     background-color: #F5F3F3;
     border: none;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Manrope";
+    letter-spacing: 1px;
+    font-weight: 600;
+
+}
+
+.text-side-B button:hover{
+    color: white;
+    background-color: #7A573A;
+}
+
+.contact-us-circle{
+     font-family: "Manrope";
+    height: 40vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.contact-us-circle h1{
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-family: "Playfair Display";
+        line-height: 52px;
+    font-weight: 500;
+    
+}
+
+.contact-us-circle h4{
+   
+    line-height: 28px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #444748;
+    
+    
+}
+
+
+.email-subscribe{
+    display: flex;
+    margin-top: 30px;
+    /* height: 100px; */
+    /* background-color: #fff; */
+    position: relative;
+    
+}
+
+.email-subscribe input{
+    height: 48px;
+    width: 660px;
+    font-size: 18px;
+    border: none;
+    position: relative;
+    background: transparent;
+    outline: none;
+}
+
+.email-subscribe button{
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    height: 48px;
+    width: 100px;
+    /* font-size: 13px; */
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    color: #1B1C1C;
+}
+
+.email-subscribe::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    background: #C4C7C7;
+}
+
+
+.email-subscribe input:focus{
+   border-bottom: 3px solid #000;
+  
+   
+}
+
+footer{
+    height: 55vh;
+    background-color: #EFEDED;
 }
