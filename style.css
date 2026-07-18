@@ -134,6 +134,10 @@ font-size: 20px;
 }
 
 
+#hamburger{
+    display: none;
+}
+
 
 .main-dis{
     display: flex;
@@ -288,7 +292,13 @@ height: 40px;
     border: 1px solid black;
     background-color: transparent;
     border-radius: 50%;
+    /* position: relative; */
 }
+.watch-img button:active{
+    font-size: 25px;
+    
+}
+
 
 .box1{
     height: 50px;
@@ -535,7 +545,8 @@ font-size: 15px;
 
 
 .img-side-A img{
-   height: 550px;
+   /* height: 550px; */
+   height: 29vw;
    filter: saturate(0%);
 
  
@@ -823,8 +834,14 @@ footer{
 
 .collections-bar a{
     color: #595B5C;
+  
 }
 
+
+.collections-bar a:hover{
+    color: goldenrod;
+      cursor: pointer;
+}
 
 
 
@@ -865,7 +882,10 @@ display: none;
 }
 
 
+
 }
+
+
 
 
 
@@ -920,4 +940,22 @@ display: none;
 
 #splash-screen.exit {
     transform: translateY(-100%);
+}
+
+
+@media (max-width:700px) {
+    #hamburger{
+    display: initial;
+}
+
+.middle-btn{
+    display: none;
+}
+
+.left-btn{
+    margin-left: -100px;
+}
+.main-top{
+    display: none;
+}
 }

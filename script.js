@@ -66,6 +66,18 @@ gsap.from(".text-area" , {
         // markers: true
     }
 })
+gsap.from("#sign-up" , {
+    delay:2.7,
+    x: 100,
+    opacity: 0,
+     scrollTrigger: {
+       trigger: "nav",
+        start: "top 80%",           
+        end: "top 20%",
+        // scrub: 1,
+        // markers: true
+    }
+})
 gsap.from(".contact-us-circle h1" , {
     y: 50,
     opacity: 0,
