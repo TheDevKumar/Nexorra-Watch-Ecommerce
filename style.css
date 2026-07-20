@@ -13,15 +13,14 @@ html , body{
 }
 
 
+
 header nav{
-    /* 1. Transparent white background (rgba use karenge takay opacity control ho sake) */
+    
     background-color: rgba(251, 249, 249, 0.75); 
-    
-    /* 2. Backdrop filter jo peeche wale content ko blur karega */
+
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Safari browser support ke liye */
-    
-    /* 3. Ek halka sa bottom border (optional, glass look ko mazeed behtar banata hai) */
+    -webkit-backdrop-filter: blur(10px); 
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     
     height: 75px;
@@ -38,6 +37,7 @@ header nav{
     overflow: hidden;
     position: fixed;
     z-index: 1000;
+   
 
 }
 
@@ -102,6 +102,13 @@ header nav{
 
 }
 
+.middle-btn button:hover{
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    
+}
+
 .end-btn{
     width: 200px;
     display: flex;
@@ -135,7 +142,19 @@ font-size: 20px;
 
 
 #hamburger{
-    display: none;
+       display: none;
+    background: transparent;
+}
+
+#hamburger i {
+    height: 50px;
+    width: 10px;
+font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-self: end; */
+    /* margin-left: 100px; */
 }
 
 
@@ -945,8 +964,15 @@ display: none;
 
 @media (max-width:700px) {
     #hamburger{
-    display: initial;
+    display: flex;
+    
 }
+
+#sign-up{
+    display: none;
+}
+
+
 
 .middle-btn{
     display: none;
@@ -958,4 +984,64 @@ display: none;
 .main-top{
     display: none;
 }
+
+
+header nav{
+    /* justify-content: space-between; */
+
+}
+.end-btn{
+    margin-right: -230px;
+    gap: 30px;
+    
+}
+.end-btn button i{
+    font-size: 25px;
+}
+#hamburger i{
+font-size: 25px;
+}
+.img-side-A{
+    height: 80vw;
+    width: 80vw;
+    margin-top: 60px;
+}
+
+.text-side-B{
+    /* height: 70vw; */
+    width: 90vw;
+    
+}
+
+.text-side-B h1{
+    font-size: 7vw;
+}
+
+.text-side-B h3{
+    font-size: 2vw;
+  
+}
+
+.text-side-B h4{
+    font-size: 2vw;
+   text-overflow: wrap;
+}
+
+
+
+
+}
+
+@media (max-width:520px) {
+    /* .watch-img img{
+    width: 350px;
+    height: 350px;
+    
+}
+
+.watch-img{
+    height: 50vw;
+    width: 50vw;
+} */
+ 
 }
