@@ -204,3 +204,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+const hamburger = document.querySelector("#hamburger");
+const responsiveBar = document.querySelector(".responsive-bar");
+const closeMenu = document.querySelector("#hamburger2");
+
+hamburger.addEventListener("click", () => {
+    responsiveBar.classList.add("active");
+    hamburger.style.display = "none"
+    closeMenu.style.display = "block"
+});
+closeMenu.addEventListener("click", () => {
+    responsiveBar.classList.remove("active");
+    hamburger.style.display = "block"
+    closeMenu.style.display = "none"
+});

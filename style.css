@@ -9,7 +9,8 @@ html , body{
     height: auto;
     min-height: 100vh;
     width: 100%;
-    background-color: #FBF9F9;
+    background-color: #FBF9F9; 
+        touch-action: pan-y;
 }
 
 
@@ -40,6 +41,70 @@ header nav{
    
 
 }
+.responsive-bar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+
+    background:rgba(248,243,238,.96);   /* Cream Glass */
+    backdrop-filter:blur(18px);
+
+    display: none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:28px;
+
+    z-index: 1000;
+}
+
+.responsive-bar button{
+    width:340px;
+    height:58px;
+
+    background:transparent;
+    color:#111111;
+
+    border:1px solid #D9CDBF;
+    border-radius:12px;
+
+    font-family:"Playfair Display", serif;
+    font-size:18px;
+    font-weight:600;
+    letter-spacing:2px;
+    
+    transition:.35s ease;
+    cursor:pointer;
+}
+
+.responsive-bar{
+    position: fixed;
+    inset: 0;
+    display: flex;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: .5s ease;
+}
+
+.responsive-bar.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.responsive-bar button:hover{
+    background:#C88A5A;
+    color:#fff;
+    border-color:#C88A5A;
+
+    transform:translateX(10px);
+    box-shadow:0 10px 30px rgba(200,138,90,.25);
+}
+
 
 .left-btn{
     line-height:52px;
@@ -153,10 +218,25 @@ font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* justify-self: end; */
-    /* margin-left: 100px; */
+
 }
 
+
+
+#hamburger2{
+       display: none;
+    background: transparent;
+}
+
+#hamburger2 i {
+    height: 50px;
+    width: 10px;
+font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 
 .main-dis{
     display: flex;
@@ -866,6 +946,7 @@ footer{
 
 
 @media (max-width:1315px) {
+   
 
 
     .card-1-season{
@@ -879,6 +960,11 @@ display: none;
 .edition-bar-main{
     flex-direction: column;
     height: 100v;
+}
+
+.img-side-A img{
+    height: 500px;
+    
 }
 
 
@@ -900,6 +986,9 @@ display: none;
 
 }
 
+.branding-logo{
+    margin-left: 100px;
+}
 
 
 }
@@ -962,86 +1051,262 @@ display: none;
 }
 
 
-@media (max-width:700px) {
-    #hamburger{
-    display: flex;
-    
-}
+@media (max-width:740px){
 
-#sign-up{
-    display: none;
-}
-
-
-
-.middle-btn{
-    display: none;
-}
-
-.left-btn{
-    margin-left: -100px;
-}
-.main-top{
-    display: none;
-}
 
 
 header nav{
-    /* justify-content: space-between; */
-
-}
-.end-btn{
-    margin-right: -230px;
-    gap: 30px;
+    padding:0 20px;
+    justify-content:space-between;
+    width: 120%;
     
 }
-.end-btn button i{
-    font-size: 25px;
+
+.middle-btn{
+    display:none;
 }
-#hamburger i{
-font-size: 25px;
+
+#sign-up{
+    display:none;
 }
+
+#hamburger{
+    display:block;
+}
+
+.left-btn{
+    margin:0;
+    font-size:14px;
+}
+
+.end-btn{
+    margin:0;
+    gap:15px;
+    margin-right: 50px;
+    
+}
+
+
+.display-text-watch{
+    height:auto;
+    min-height:100vh;
+    padding:100px 20px 50px;
+}
+
+.display-idea{
+    flex-direction:column-reverse;
+    gap:30px;
+}
+
+.text-area{
+    width:100%;
+    height:auto;
+    text-align:center;
+    align-items:center;
+}
+
+.text-top,
+.text-middle,
+.text-end{
+    width:100%;
+    height:auto;
+}
+
+.text-top h1{
+    font-size:40px;
+}
+
+.text-middle{
+    font-size:15px;
+    margin:20px 0;
+}
+
+.price h1{
+    font-size:35px;
+}
+
+#btn-attend-1,
+#btn-attend-2{
+    width:100%;
+    margin:10px 0;
+}
+
+
+.watch-img{
+    width:100%;
+    height:auto;
+}
+
+.watch-img img{
+    width:280px;
+    height:auto;
+}
+
+.watch-img button{
+    display:none;
+}
+
+
+.scroll-section{
+    height:90px;
+}
+
+#scroll-text{
+    font-size:35px;
+}
+
+
+.seasonal-list-main{
+    height:auto;
+}
+
+.seasonal-list-A{
+    flex-direction:column;
+    height:auto;
+    padding:20px;
+    gap:15px;
+}
+
+.all-collection button{
+    display:none;
+}
+
+.seasonal-cards{
+    flex-direction:column;
+    height:auto;
+    padding:20px;
+}
+
+.card-1-season{
+    display:flex;
+    width:100%;
+}
+
+.card-1-inside{
+    width:100%;
+}
+
+.card-1-inside img{
+    width:180px;
+    height:auto;
+}
+
+.edition-bar-main{
+    flex-direction:column;
+    height:auto;
+    padding:40px 20px;
+}
+
 .img-side-A{
-    height: 80vw;
-    width: 80vw;
-    margin-top: 60px;
+    width:100%;
+    position: relative;
+    height:auto;
+}
+
+.img-side-A img{
+    
+    height:auto;
+}
+
+.img-side-a-text{
+  
+    display: none;
 }
 
 .text-side-B{
-    /* height: 70vw; */
-    width: 90vw;
-    
+    width:100%;
+    height:auto;
 }
 
 .text-side-B h1{
-    font-size: 7vw;
+    font-size:32px;
 }
 
 .text-side-B h3{
-    font-size: 2vw;
-  
+    font-size:12px;
 }
 
 .text-side-B h4{
-    font-size: 2vw;
-   text-overflow: wrap;
+    font-size:14px;
 }
 
 
 
+.contact-us-circle{
+    height:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.contact-us-circle h1{
+    font-size:32px;
+}
+
+.contact-us-circle h4{
+    font-size:15px;
+}
+
+.email-subscribe{
+    flex-direction:column;
+}
+
+.email-subscribe input{
+    width:100%;
+}
+
+.email-subscribe button{
+    width:100%;
+}
+
+
+footer{
+    height:auto;
+}
+
+.main-top{
+    flex-direction:column;
+    height:auto;
+    gap:30px;
+    padding:30px 20px;
+}
+
+.branding-logo{
+    width:100%;
+    margin:0;
+    text-align:center;
+}
+
+.collection-main-bar{
+    width:100%;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
 
 }
 
-@media (max-width:520px) {
-    /* .watch-img img{
-    width: 350px;
-    height: 350px;
+
+@media (max-width : 532px) {
+    .end-btn{
+        margin-right: -15px;
+       
+    }
+  
+}
+
+@media (max-width : 400px) {
+      .edition-bar-main{
+        width: 410px;
+    }
+      footer{
+        width: 410px;
+    }
+    .contact-us-circle{
+        width: 410px;
+    }
+
+    .seasonal-list-main{
+        width: 410px;
+    }
     
-}
-
-.watch-img{
-    height: 50vw;
-    width: 50vw;
-} */
- 
 }
