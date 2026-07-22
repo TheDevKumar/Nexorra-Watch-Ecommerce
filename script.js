@@ -134,6 +134,13 @@ const watches = [
 
 ];
 
+
+watches.forEach(watch => {
+    const img = new Image();
+    img.src = watch.img;
+});
+
+
 let current = 0;
 
 function updateWatch() {
