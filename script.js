@@ -116,18 +116,18 @@ let realwatch = document.querySelector("#watch-img-real")
 
 const watches = [
        {
-        img: "./1.png",
+        img: "./1.webp",
         color: "#F3F1F1", 
         price: "$400.00"
     },
  {
-        img: "./4.png",
+        img: "./4.webp",
         color: "#D8E5D8", 
         price: "$340.00"
     },
     
     {
-        img: "./bang.png",
+        img: "./bang.webp",
         color: "#E4DCEC", 
         price: "$700.00"
     },
